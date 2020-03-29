@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const {errors} = require('celebrate');
 /**
  * Importa o arquivo de rotas
  */
@@ -7,6 +8,7 @@ const routes = require('./routes');
 const app = express();
 
 app.use(cors());
+
 /**
  * Para que o request body possa entender o conteúdo do corpo.
  * json para o corpo das requisições
@@ -18,5 +20,6 @@ app.use(express.json());
  * Vincula o uso do arquivo de rotas com a aplicação
  */
 app.use(routes);
+app.use(errors());
 
-app.listen(3333);
+module.exports = app;
