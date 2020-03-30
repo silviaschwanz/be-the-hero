@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  back-end:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: silviaschwanz/back-end
+    container_name: back-end
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules # Remove this if you have pure JS dependencies
+    ports:
+      - "3333:3333"
+    networks:
+      - dev-network
+      
+networks:
+  dev-network:
+    driver: bridge
+    
