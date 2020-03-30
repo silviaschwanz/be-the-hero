@@ -1,5 +1,5 @@
 # be-the-hero
-Aplicativo semana OmniStack - Março/2020
+**Aplicativo semana OmniStack - Março/2020**
 
 Esse aplicativo foi desenvolvido na semana OmniStack de Março de 2020. Trata-se de uma stack completa em javascript. 
 Utilizando:
